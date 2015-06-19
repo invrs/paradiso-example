@@ -15,7 +15,10 @@ module.exports = class
       if @server
         @HTML [
           @HEAD @TITLE @title
-          @BODY @header()
+          @BODY [
+            @header()
+            @SCRIPT src: "/client.js"
+          ]
         ]
       else
         @header()

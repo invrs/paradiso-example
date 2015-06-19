@@ -5,11 +5,17 @@
   "author": "Winton Welsh <winton@cyclo.ps>",
   "license": "MIT",
   "dependencies": {
+    "browserify": "",
+    "coffeeify": "",
     "coffee-script": "",
     "express": "",
     "mithril": "",
     "paradiso": ""
   },
   "devDependencies": {
+  },
+  "scripts": {
+    "prestart": "browserify -t coffeeify app/client.coffee > dist/client.js",
+    "start": "coffee app/server.coffee"
   }
 }

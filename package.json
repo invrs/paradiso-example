@@ -1,0 +1,15 @@
+{
+  "name": "paradiso-example",
+  "version": "1.0.0",
+  "description": "Basic paradiso example project",
+  "author": "Winton Welsh <winton@cyclo.ps>",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "",
+    "express": "",
+    "mithril": "",
+    "paradiso": ""
+  },
+  "devDependencies": {
+  }
+}

@@ -1,8 +1,9 @@
 module.exports = class
-  constructor: ({ @title, @user }) ->
-    @body = @p "Hello, #{@user().name}"
+  constructor: ({ @user }) ->
+    @body  = @p "Hello, #{@user().name}"
+    @title = @p "Welcome"
   
   view: ->
-    @layoutView({ @body, @title })
+    @layoutView { @body, @title }
 
   LayoutView: require "./layout.coffee"

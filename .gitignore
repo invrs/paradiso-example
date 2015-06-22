@@ -1,2 +1,3 @@
+*.log
 dist/client.js
 node_modules/

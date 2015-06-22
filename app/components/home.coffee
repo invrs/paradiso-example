@@ -1,27 +1,18 @@
 module.exports = class
   constructor: ->
-    @title = "Welcome"
+    @title = @p "Welcome"
 
   view: ->
-    @homeView()
+    @homeView @
 
   HomeView: class
-    constructor: ({ @title, @user }) ->
-
-    header: ->
-      "Hello, #{@user().name}"
+    constructor: ({ @title, @user }) ->      
+      @body = @p "Hello, #{@user().name}"
     
     view: ->
-      if @server
-        @HTML [
-          @HEAD @TITLE @title
-          @BODY [
-            @header()
-            @SCRIPT src: "/client.js"
-          ]
-        ]
-      else
-        @header()
+      @layoutView({ @body, @title })
+
+    LayoutView: require "./layout.coffee"
 
   User: class
     constructor: ->
